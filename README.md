@@ -41,3 +41,26 @@ Build a light-weight static triage tool that produces a structured riks report f
 - scanner aggregates results
 - report layer formats output
 - no detection logic in CLI
+
+# Setup
+
+Create a virtual environment (recommended)
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+# Execution
+
+Run firmware triage:
+
+```bash
+python3 -m firmtriage.cli sample.bin
+```
+
+Run tests:
+
+```bash
+python3 -m pytest
+```
