@@ -14,6 +14,7 @@ import os
 from firmtriage.strings_scan import strings_scan
 from firmtriage.entropy import entropy
 from firmtriage.metadata import metadata
+from firmtriage.magic_scanner import scan_magic
 
 class FirmwareScanner:
     def __init__(self, filepath):
@@ -41,6 +42,10 @@ class FirmwareScanner:
         """Run strings extraction"""
         self.results["strings"] = strings_scan(self.data)
     
+    def run_magic_scanner(self):
+        """Run magic scanner"""
+        self.results["magic"] = scan_magic(self.data)
+
     def scan(self):
         """Main orchestration function"""
         

@@ -27,3 +27,11 @@ def generate_report(results):
         print(f"	- {s}")
     print("\n	urls:", strings["urls"])
     print("		ips:", strings["ips"])
+    print("\nMagic detection:")
+    magic = results["magic"]
+
+    if magic["count_total"] == 0:
+        print("     no known signatures detected")
+    else:
+        for match in magic["matches"]:
+            print(f"        - {match}")
