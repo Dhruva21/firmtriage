@@ -26,7 +26,14 @@ Build a light-weight static triage tool that produces a structured riks report f
     - possible secrets
 - Generated structured json report
 
-## v2 (Next)
+## v2
+- add offsets for magic signatures
+- add offsets for extracted strings
+- detect certificates / crypto artifacts
+- support JSON report output
+- improve README with architecture and example reports
+
+## v3 (Next)
 - full reverse engineering
 - disassembly
 - dynamic analysis
